@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Chakra+Petch:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Gabarito', cursive, Avenir, Helvetica, Arial, sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+header{
+  position: fixed;
+  width: 100vw;
+  height: 15vh;
+  background-color: #DE2A40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-box-shadow: -1px 10px 26px -1px rgba(0,0,0,0.1);
+  -moz-box-shadow: -1px 10px 26px -1px rgba(0,0,0,0.1);
+  box-shadow: -1px 10px 26px -1px rgba(0,0,0,0.1);
+
+}
+
+main{
+  width: 100vw;
+  min-height: 75vh;
+  background-color: white;
+  padding: 0 0 1rem 0;
+}
+
+footer{
+  bottom: 0;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  color: black;
+  background-color: black;
+  align-items: center;
+  -webkit-box-shadow: -1px -5px 26px -1px rgba(0,0,0,0.1);
+-moz-box-shadow: -1px -5px 26px -1px rgba(0,0,0,0.1);
+box-shadow: -1px -5px 26px -1px rgba(0,0,0,0.1);
+}
