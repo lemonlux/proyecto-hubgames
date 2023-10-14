@@ -4,7 +4,7 @@ import "./ButtonFilter.css";
 export const PrintButton = (types) => {
   types.forEach((type) => {
     const buttonType = `<button class="buttonFilter ${type}">
-      ${type}
+      ${type.toUpperCase()}
     </button>`;
     const containerFilter = document.getElementById("filterButton");
     containerFilter.innerHTML += buttonType;
