@@ -4,11 +4,12 @@ import "./Dashboard.css";
 
 const template = () => `
   <div id="containerDashboard">
+  <h1 class="start">START GAME</H1>
     <ul>
       <li>
         <figure id="navigatePokemon">
-          <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761508/pngwing.com_r0hr9b.png"
+          <img class="dashboardimg"
+            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697276300/Untitled_Artwork_15_zxveds.png"
             alt="go to page pokemon"
           />
           <h2>POKEMON</h2>
@@ -16,7 +17,7 @@ const template = () => `
       </li>
       <li>
         <figure>
-          <img
+          <img class="dashboardimg"
             src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761641/pngwing.com_1_iq8zfk.png"
             alt=" go to wacka topo game"
           />
@@ -25,8 +26,8 @@ const template = () => `
       </li>
       <li>
         <figure>
-          <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761735/6168776_kfna36.png"
+          <img class="dashboardimg" id="figure-memory"
+            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697315767/pokemon_card_pixel_art_gif_wcispv.jpg"
             alt="go to memory game"
           />
           <h2>MEMORY GAME</h2>
@@ -52,5 +53,5 @@ export const printTemplateDashboard = () => {
   document.querySelector("nav").style.display = "flex";
   addEventListeners();                                      //aqui habria que meter mas funciones de eventos segun el juego
   console.log(getData());
-  getInfo();                  //no haria falta porque ya la llamamos en el main
+  getInfo();                  //lo tengo en el dashboard para que vaya mas rapido el fetch
 };

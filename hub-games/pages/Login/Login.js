@@ -4,8 +4,8 @@ import "./Login.css";
 const template = () => `
   <div id="containerLogin">
     <h1 id="titleLogin">LOGIN</h1>
-    <input type="text" name="username" id="username" />
-    <button id="buttonLogin">enviar</button>
+    <input type="text" name="username" id="username" placeHolder="Ana"/>
+    <button id="buttonLogin">entrar</button>
   </div>
 `;
 
@@ -19,7 +19,8 @@ const addListeners = () => {
       name: valueInput,
       fav: [],
     };
-    // como trabajo con el local lo convierto a string
+
+    //condicional para guardar la informacion aunque te salgas de la pagina
 
     if (localStorage.getItem(`${valueInput}USER`)) {
       const localUser = localStorage.getItem(`${valueInput}USER`);
@@ -32,10 +33,6 @@ const addListeners = () => {
       setUser(`${valueInput}USER`);
 
       setUserData(parseUser);
-      console.log(
-        "🚀 ~ file: Login.js:35 ~ buttonLogin.addEventListener ~ parseUser:",
-        parseUser
-      );
     } else {
       const customUser = {
         name: username.value,

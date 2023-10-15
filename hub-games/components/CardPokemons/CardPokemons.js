@@ -14,8 +14,11 @@ export const CardsPokemons = (data) => {
     const classCustomType = `"figurePokemon ${pokemon.type[0].type.name}"`;
     const templateFigure = ` 
     
-    <figure id=${pokemon.id}>
-          <img src=${pokemon.image} alt=${pokemon.name} />
+    <figure class="pokemonfigure">
+        <div class="pokemon-image">
+          <img class="pokemon-imageFront" id=${pokemon.id} src=${pokemon.image} alt=${pokemon.name} />
+          <img class="pokemon-imageBack" id=${pokemon.id} src=${pokemon.backImage} alt=${pokemon.name} />
+        </div>
           <h3 class="${pokemon?.name}">${pokemon?.name.charAt(0).toUpperCase() + pokemon?.name.slice(1)}</h3>
           <div class="class-container">
                  <h4 class="${pokemon?.typeOne}" id="type-one">${pokemon?.typeOne.toUpperCase()}</h4>
@@ -29,7 +32,8 @@ export const CardsPokemons = (data) => {
     `
     ;
     document.getElementById("galleryPokemon").innerHTML += templateFigure;       
-    addListeners(data);                         // se mete debajo del template de pokemon
+    addListeners(data);  
+    // addListenerBack(data)                       // se mete debajo del template de pokemon
   });
 };
 
@@ -46,10 +50,7 @@ const addListeners = (data) => {
 
       if (appUser.fav.includes(e.target.parentNode.id)) {
         const appUser = getUserData();
-        console.log(
-          "🚀 ~ file: CardPokemons.js:38 ~ span.addEventListener ~ appUser:",
-          appUser
-        );
+        console.log(appUser);
         const newFavArray = [];
 
         appUser.fav.forEach((id) => {
@@ -71,3 +72,21 @@ const addListeners = (data) => {
     });
   });
 };
+
+// const imagesFunction = () =>{
+// const pokemonImages = document.querySelectorAll(".pokemon-image")
+// pokemonImages.forEach(image =>{
+//   return image
+// })
+// }
+
+// const addListenerBack = () =>{
+//   const pokemonFigures = document.querySelectorAll(".pokemonfigure")
+//   const pokemonId = document.querySelector(`${pokemon.id}`)
+//   pokemonFigures.forEach((figure)=>{
+//     figure.addEventListener("click", e =>{
+//       pokemonId.removeAttribute("src")
+//       console.log("entroooo")
+//       })
+//     })
+//   }

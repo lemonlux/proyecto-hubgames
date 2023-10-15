@@ -1,18 +1,18 @@
-footer {
+footer{
+  bottom: 0;
+  width: 100vw;
   height: 10vh;
   display: flex;
   justify-content: center;
+  color: black;
+  background-color: black;
   align-items: center;
-  background: #0d0d0d;
-  -webkit-box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.61);
-  -moz-box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.61);
-  box-shadow: 0px 8px 30px -3px rgba(0, 0, 0, 0.61);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 100;
-  color: #0def03;
-  & span {
-    color: white;
-  }
+  -webkit-box-shadow: -1px -5px 26px -1px rgba(0,0,0,0.1);
+-moz-box-shadow: -1px -5px 26px -1px rgba(0,0,0,0.1);
+box-shadow: -1px -5px 26px -1px rgba(0,0,0,0.1);
+}
+
+.footer-container{
+  color: white;
+
 }

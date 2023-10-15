@@ -48,7 +48,7 @@ const addListeners = () => {
   });
 };
 
-export const PrintPokemonPage = () => {
+export const PrintPokemonPage = () => {       // = para borrar lo que ya tenga
   document.querySelector("main").innerHTML = template();
   PrintTemplateSpinner();
   PrintSpinner();

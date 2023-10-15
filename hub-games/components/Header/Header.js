@@ -6,28 +6,18 @@ import "./Header.css";
 //! ------------------1) TEMPLATE -------------------------------------
                                   // template con logo, dashboard, colorchange y logout
 const template = () => `         
-  <img
-    src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679162/header_giqdug.jpg"
-    alt="title hub game website (app)"
-    class="logo"
-  />
-  <nav>
-    <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682684561/changeColor_tat29q.png"
-      alt=" change to style mode page"
-      id="changeColor"
-    />
-    <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682685633/home_nekvs0.png"
-      alt=" navigate to home app"
-      id="buttonDashboard"
-    />
-    <img
-      src="https://res.cloudinary.com/dq186ej4c/image/upload/v1682679055/logout_arz0gw.png"
-      alt="logout"
-      id="buttonLogout"
-    />
-  </nav>
+    <div id="pokedex-logo">
+        <img src="https://res.cloudinary.com/daxddugwt/image/upload/v1696760751/jgsl4y6xcbllsxzx4z7l.png" alt="logo" id="logo"/>
+        <h1>POKEGAMES</h1>
+    </div>
+    <nav>
+        <ul>
+            <li class="linav" id="buttonDashboard">HOME</li>
+            <li class="linav" id="buttonLogout">PROFILE</li>
+            <li class="linav" id="changeColor">NIGHT MODE</li>
+        </ul>
+</nav>
+ 
 `;
 
 //! ----------------------- 2 ) Añadir los eventos con sus escuchadores
@@ -38,8 +28,10 @@ const addListeners = () => {
   // evento click del boton de cambio de color
   const changeColor = document.getElementById("changeColor");
   changeColor.addEventListener("click", (e) => {
-    const color = changeColorRGB();
-    document.body.style.background = color;
+    // const color = changeColorRGB();
+    if (document.body.style.background == "white"){
+      document.body.style.background = "black"
+    }
   });
 
   // evento click del boton que nos lleva a los juegos

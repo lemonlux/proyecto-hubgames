@@ -5,6 +5,8 @@ export const initTemplate = () => {         //    el template q inicia toda la a
 
   //? -------> vamos a crear los elementos
   const header = document.createElement("header");
+  header.classList= "header"
+  header.setAttribute("id", "header-id")
   const main = document.createElement("main");
   const footer = document.createElement("footer");
 

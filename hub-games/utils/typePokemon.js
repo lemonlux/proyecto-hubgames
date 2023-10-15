@@ -9,3 +9,5 @@ export const typePokemon = (data) => {
 
   return nameType;
 };
+
+// guardar en un array los tipos que no esten repetidos
