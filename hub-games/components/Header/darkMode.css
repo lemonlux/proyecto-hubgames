@@ -1,13 +1,23 @@
 body.dark{
 
-
+ & #header-id{
+        background-color: #581d1d;
+    }
+& h1, li, h3{
+    color:rgb(241, 231, 222)
+}
 
 & main{
-    background-color: rgb(26, 16, 15);
+    background-color: rgb(20, 11, 11);
 
     & .start{
-        color:beige;
+        color:rgb(249, 244, 239);
     }
 }
+ & #buttonLogin{
+    color:rgb(243, 233, 223);
+    background-color: #581d1d;
+    border: 1px solid rgb(244, 237, 230);
+ }
 
 }

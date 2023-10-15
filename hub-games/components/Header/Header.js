@@ -15,7 +15,7 @@ const template = () => `
         <ul>
             <li class="linav" id="buttonDashboard">HOME</li>
             <li class="linav" id="buttonLogout">PROFILE</li>
-            <li class="linav" id="changeColor">NIGHT MODE</li>
+            <li class="linav" id="changeColor">DARK MODE</li>
         </ul>
 </nav>
  
@@ -30,10 +30,10 @@ const addListeners = () => {
   // evento click del boton de cambio de color
   const changeColor = document.getElementById("changeColor");
   changeColor.addEventListener("click", (e) => {
-    const mainPage = document.querySelector("main")
+    // const mainPage = document.querySelector("main")
     document.body.classList.toggle('dark')
     changeColor.classList.toggle("active")
-
+    changeColor.innerHTML == "DARK MODE" ? changeColor.innerHTML = "LIGHT MODE" : changeColor.innerHTML = "DARK MODE"
     // const color = changeColorRGB();
     // if (document.body.style.backgroundColor == "white"){
     //   main.classList.add= "mainMode"
