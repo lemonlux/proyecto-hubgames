@@ -2,6 +2,7 @@ import { getUser } from "../../global/state/globalState";
 import { changeColorRGB } from "../../utils";
 import { initControler } from "../../utils/route";
 import "./Header.css";
+import "./darkMode.css"
 
 //! ------------------1) TEMPLATE -------------------------------------
                                   // template con logo, dashboard, colorchange y logout
@@ -25,14 +26,19 @@ const template = () => `
 //- todos los eventos en una misma funcion
                                           //evento al hacer clic que nos lleva a la funcion changeColorRGB - utils
 const addListeners = () => {
+  
   // evento click del boton de cambio de color
   const changeColor = document.getElementById("changeColor");
   changeColor.addEventListener("click", (e) => {
+    const mainPage = document.querySelector("main")
+    document.body.classList.toggle('dark')
+    changeColor.classList.toggle("active")
+
     // const color = changeColorRGB();
-    if (document.body.style.backgroundColor == "white"){
-      main.classList.add= "mainMode"
-    }
-  });
+    // if (document.body.style.backgroundColor == "white"){
+    //   main.classList.add= "mainMode"
+  })
+
 
   // evento click del boton que nos lleva a los juegos
   const buttonDashboard = document.getElementById("buttonDashboard");
@@ -53,7 +59,7 @@ const addListeners = () => {
     localStorage.setItem(userState, stringUpdateUser);
     initControler("Login");
   });
-};
+}
 
 //! ------------------------------ 3) La funcion que se exporta y que pinta
 export const PrintTemplateHeader = () => {

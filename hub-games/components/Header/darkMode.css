@@ -1,0 +1,13 @@
+body.dark{
+
+
+
+& main{
+    background-color: rgb(26, 16, 15);
+
+    & .start{
+        color:beige;
+    }
+}
+
+}
