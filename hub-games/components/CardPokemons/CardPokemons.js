@@ -4,20 +4,17 @@ import "./CardPokemons.css";
 export const CardsPokemons = (data) => {
   const appUser = getUserData();
 
-  console.log(appUser);
-  
   document.getElementById("galleryPokemon").innerHTML = "";
-  console.log(appUser);
 
   data.map((pokemon) => {          //esto es para printear el template de cada pokemon
     console.log(pokemon.id.toString());
     const classCustomType = `"figurePokemon ${pokemon.type[0].type.name}"`;
     const templateFigure = ` 
     
-    <figure class="pokemonfigure">
+    <figure class="pokemonfigure" id=${pokemon.id} >
         <div class="pokemon-image">
-          <img class="pokemon-imageFront" id=${pokemon.id} src=${pokemon.image} alt=${pokemon.name} />
-          <img class="pokemon-imageBack" id=${pokemon.id} src=${pokemon.backImage} alt=${pokemon.name} />
+          <img class="pokemon-imageFront" src=${pokemon.image} alt=${pokemon.name} />
+          <img class="pokemon-imageBack" src=${pokemon.backImage} alt=${pokemon.name} />
         </div>
           <h3 class="${pokemon?.name}">${pokemon?.name.charAt(0).toUpperCase() + pokemon?.name.slice(1)}</h3>
           <div class="class-container">

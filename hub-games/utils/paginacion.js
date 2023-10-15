@@ -16,7 +16,7 @@ export const Paginacion = (data, numberElement) => {
     allButton.forEach((pag) => {
       pag.style.border = "solid 3px #0000006d ";
     });
-    allButton[0].style.border = "solid 3px #15a00e7d";
+    allButton[0].style.border = "solid 3px #DE2A40 ";
     allButton[0].style.color = " #083905ff";
   }
 
@@ -38,8 +38,8 @@ const addListeners = (
       pag.style.border = "solid 3px #0000006d ";
     });
 
-    buttonNumber.style.border = "solid 3px #15a00e7d ";
-    buttonNumber.style.color = " #093f06ff";
+    buttonNumber.style.border = "solid 3px #DE2A40 ";
+    buttonNumber.style.color = " black ";
 
     const end = (i + 1) * numberElement;
     const start = end - numberElement < 0 ? 0 : end - numberElement;
