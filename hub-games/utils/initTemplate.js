@@ -8,6 +8,7 @@ export const initTemplate = () => {         //    el template q inicia toda la a
   header.classList= "header"
   header.setAttribute("id", "header-id")
   const main = document.createElement("main");
+  // main.classList= "mainMode"
   const footer = document.createElement("footer");
 
   //? -------> inyectamos os elementos en el contenedor de la app

@@ -29,8 +29,8 @@ const addListeners = () => {
   const changeColor = document.getElementById("changeColor");
   changeColor.addEventListener("click", (e) => {
     // const color = changeColorRGB();
-    if (document.body.style.background == "white"){
-      document.body.style.background = "black"
+    if (document.body.style.backgroundColor == "white"){
+      main.classList.add= "mainMode"
     }
   });
 
