@@ -16,7 +16,7 @@ const template = () => `
         </figure>
       </li>
       <li>
-        <figure>
+        <figure id="navigateTicTacToe">
           <img class="dashboardimg"
             src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761641/pngwing.com_1_iq8zfk.png"
             alt=" go to wacka topo game"
@@ -46,6 +46,11 @@ const addEventListeners = () => {             //evento si clikeas en pokemon
 navigateMemory.addEventListener("click", e => {
   initControler("Memory")
 })
+
+  const navigateTicTacToe = document.getElementById("navigateTicTacToe")
+  navigateTicTacToe.addEventListener("click", e =>{
+    initControler("TicTacToe")
+  })
 };
 
 
