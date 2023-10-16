@@ -19,8 +19,8 @@
   justify-content: center;
   flex-flow: column wrap;
   border-radius: 5%;
-  background-color: rgba(138, 96, 96, 0.56);
-  border: 5px groove rgb(123, 102, 102);
+  background-color: rgba(154, 141, 136, 0.56);
+  border: 5px groove rgb(130, 120, 117);
 }
 
 .pokemonfigure:hover{
