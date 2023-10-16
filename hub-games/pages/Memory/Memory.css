@@ -1,0 +1,40 @@
+.game-container{
+    width: 35em;
+    height: 40em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#board {
+    padding: 0 2em 2em 2em;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 5.5em 5.5em 5.5em 5.5em 5.5em;
+    /* grid-template-columns: repeat(
+        auto-fit, 
+        minmax(7em,1fr)
+    ); */
+    width: 30em;
+    height: 35em;
+}
+
+.card {
+    max-width: 5em;
+    margin: 2.5px;
+    border-radius: 5%;
+    -webkit-box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65);
+    -moz-box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65);
+    box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65);
+}
+
+.card:hover{
+    transform: scale(0.97)
+}
+
+/* img{
+    width: 15px;
+    height: 15px;
+} */

@@ -25,7 +25,7 @@ const template = () => `
         </figure>
       </li>
       <li>
-        <figure>
+        <figure id="navigateMemory">
           <img class="dashboardimg" id="figure-memory"
             src="https://res.cloudinary.com/daxddugwt/image/upload/v1697315767/pokemon_card_pixel_art_gif_wcispv.jpg"
             alt="go to memory game"
@@ -42,7 +42,12 @@ const addEventListeners = () => {             //evento si clikeas en pokemon
   navigatePokemon.addEventListener("click", () => {         //si clicas en el figure
     initControler("Pokemon");                     //inicia la funcion initControler con pokemon
   });
+  const navigateMemory = document.getElementById("navigateMemory")
+navigateMemory.addEventListener("click", e => {
+  initControler("Memory")
+})
 };
+
 
   //habria que hacer una addEventListener para cada uno de los juegos asociados a una figure
 

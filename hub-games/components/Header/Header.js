@@ -29,13 +29,9 @@ const addListeners = () => {
   // evento click del boton de cambio de color
   const changeColor = document.getElementById("changeColor");
   changeColor.addEventListener("click", (e) => {
-    // const mainPage = document.querySelector("main")
     document.body.classList.toggle('dark')
     changeColor.classList.toggle("active")
     changeColor.innerHTML == "DARK MODE" ? changeColor.innerHTML = "LIGHT MODE" : changeColor.innerHTML = "DARK MODE"
-    // const color = changeColorRGB();
-    // if (document.body.style.backgroundColor == "white"){
-    //   main.classList.add= "mainMode"
   })
 
 

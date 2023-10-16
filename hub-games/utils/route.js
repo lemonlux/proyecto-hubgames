@@ -1,5 +1,6 @@
 import { getUser } from "../global/state/globalState";
 import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
+import { printMemoryPage } from "/Users/lucia/Desktop/FT WEB/09/FT WEB/proyecto-hubgames/hub-games/pages/Memory/Memory.js";
 
 //! ----------------------------------------------------------------------------------------------------------------------
 //? ------------------------------------- CONTROLADOR DE LO QUE SE RENDERIZA EN CADA MOMENTO------------------------------
@@ -24,7 +25,7 @@ export const initControler = (pagesRender) => {
       Login();
       break;
     case "Memory":
-      "Memory()";
+      printMemoryPage();
       break;
   }
 };
