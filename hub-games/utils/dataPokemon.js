@@ -59,9 +59,9 @@ export const filterPokemon = (filterDataInputButton, donde) => {
               .includes(filterDataInputButton.toLowerCase())
           );
 
-          Paginacion(filterData, 3);                //cuando se busca por subtipo aparecen de 3 en 3
+          Paginacion(filterData, 5);                //cuando se busca por subtipo aparecen de 3 en 3
         } else {
-          Paginacion(filterData, 3);
+          Paginacion(filterData, 5);
         }
       }
 

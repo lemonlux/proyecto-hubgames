@@ -78,10 +78,10 @@ const addListeners = (data) => {
 // }
 
 // const addListenerBack = () =>{
-//   const pokemonFigures = document.querySelectorAll(".pokemonfigure")
+//   const pokemonImages = document.querySelectorAll(".pokemon-image")
 //   const pokemonId = document.querySelector(`${pokemon.id}`)
-//   pokemonFigures.forEach((figure)=>{
-//     figure.addEventListener("click", e =>{
+//   pokemonImages.forEach((image)=>{
+//     image.addEventListener("click", e =>{
 //       pokemonId.removeAttribute("src")
 //       console.log("entroooo")
 //       })

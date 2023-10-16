@@ -20,9 +20,9 @@ const template = () => `
         placeholder="Busca tu pokemon favorito"
       />
     </div>
-    <div id="paginacion"></div>
     <div id="spinner"></div>
     <div id="galleryPokemon"></div>
+    <div id="paginacion"></div>
   </div>
 `;
 
