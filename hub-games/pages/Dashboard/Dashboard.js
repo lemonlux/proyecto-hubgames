@@ -18,10 +18,10 @@ const template = () => `
       <li>
         <figure id="navigateTicTacToe">
           <img class="dashboardimg"
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761641/pngwing.com_1_iq8zfk.png"
-            alt=" go to wacka topo game"
+            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697486751/___5_-removebg-preview_pwrvz0.png"
+            alt=" go to tic tac toe game"
           />
-          <h2>WACKA TOPO</h2>
+          <h2>TIC TAC TOE</h2>
         </figure>
       </li>
       <li>
