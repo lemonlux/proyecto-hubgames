@@ -1,0 +1,16 @@
+.mole-container{
+    width: 30em;
+    height: 30em;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 4px solid rgb(149, 149, 143);
+}
+
+.square{
+    width: 10em;
+    height: 10em;
+    border: 1px solid grey;
+}

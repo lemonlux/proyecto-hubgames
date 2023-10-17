@@ -2,7 +2,7 @@ import { getUser } from "../global/state/globalState";
 import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
 import { printMemoryPage } from "/Users/lucia/Desktop/FT WEB/09/FT WEB/proyecto-hubgames/hub-games/pages/Memory/Memory.js";
 import { printTicTacToePage } from "../pages/TicTacToe/TicTacToe.js";
-
+import { printMolePage } from "/Users/lucia/Desktop/FT WEB/09/FT WEB/proyecto-hubgames/hub-games/pages/Mole/Mole.js";
 
 
 //! ----------------------------------------------------------------------------------------------------------------------
@@ -21,8 +21,8 @@ export const initControler = (pagesRender) => {
     case "Dashboard":
       printTemplateDashboard();
       break;
-    case "TicTacToe":
-      printTicTacToePage();
+    case "Mole":
+      printMolePage();
       break;
     case "Login":
       Login();

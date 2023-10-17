@@ -8,26 +8,26 @@ const template = () => `
     <ul>
       <li>
         <figure id="navigatePokemon">
-          <img class="dashboardimg"
-            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697276300/Untitled_Artwork_15_zxveds.png"
+          <img class="dashboardimg" id="pokeball"
+            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697548361/Untitled_Artwork_15-removebg-preview_fmqnhz.png"
             alt="go to page pokemon"
           />
           <h2>POKEMON</h2>
         </figure>
       </li>
       <li>
-        <figure id="navigateTicTacToe">
-          <img class="dashboardimg"
-            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697486751/___5_-removebg-preview_pwrvz0.png"
-            alt=" go to tic tac toe game"
+        <figure id="navigateMole">
+          <img class="dashboardimg" id="mole"
+            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697548009/Dugtrio-Pokemon-PNG-File_t09hk2.png"
+            alt=" go to mole game"
           />
-          <h2>TIC TAC TOE</h2>
+          <h2>WHACK-A-MOLE</h2>
         </figure>
       </li>
       <li>
         <figure id="navigateMemory">
           <img class="dashboardimg" id="figure-memory"
-            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697315767/pokemon_card_pixel_art_gif_wcispv.jpg"
+            src="https://res.cloudinary.com/daxddugwt/image/upload/v1697548508/IMG_4566-removebg-preview_whhrxa.png"
             alt="go to memory game"
           />
           <h2>MEMORY GAME</h2>
@@ -47,10 +47,13 @@ navigateMemory.addEventListener("click", e => {
   initControler("Memory")
 })
 
-  const navigateTicTacToe = document.getElementById("navigateTicTacToe")
+  const navigateTicTacToe = document.getElementById("navigateMole")
   navigateTicTacToe.addEventListener("click", e =>{
-    initControler("TicTacToe")
+    initControler("Mole")
   })
+
+
+
 };
 
 

@@ -11,6 +11,15 @@
   margin: 32px 0 0 0;
   }
 
+  #mole{
+    height: 10em;
+    width: 13em;
+  }
+
+  #pokeball{
+ width: 10em;
+    height: 10em;
+  }
 
   .dashboardimg{
     width: 10em;

@@ -237,7 +237,7 @@ import "./Memory.css"
 const template = () =>
 `
 <div class="memory-game">
-<h3> Errores: <span id="errors">0</span></h3>
+<h3> Aciertos <span id="aciertos">0</span></h3>
     <div class="game-container">
         <div id="board">
         </div>
@@ -263,31 +263,26 @@ let cardList = {
 const keysCardList = Object.keys(cardList) // array de tipos
 const valuesCardList = Object.values(cardList) // las url de las imagenes
 
-// // console.log(valuesCardList[1])
-
-// // console.log(keysCardList)   
-// // console.log(valuesCardList)  
-
 let deck 
 
-const shuffleDeck = () =>{
+const shuffleDeck = () =>{     //para barajar todas las cartas
 deck = keysCardList.concat(keysCardList)
                                                  // 20 tipos 
     for (let i=0; i< deck.length; i++){
         let j = Math.floor(Math.random() * deck.length)
-
         let deckChange = deck[i]
         deck[i] = deck[j]
         deck[j] = deckChange
     }
     console.log(deck)
     startGame()
+    flip()
 }
 
 
 const startGame = () => {
 
-deck.forEach((item, index)=>{
+deck.forEach((item, index)=>{   //el template
   
   let card = `
   <figure class="card">
@@ -298,48 +293,99 @@ deck.forEach((item, index)=>{
   document.getElementById("board").innerHTML +=card
 
 })
+let aciertos = document.querySelector("span").textContent
+
+console.log(aciertos)
+
+let aciertosNum = parseInt(aciertos)
 }
+
+
+
+
+
+let firstCard, firstCardId
+let secondCard, secondCardId
 
 const flip = () =>{
     let cardsFlipped = []
     const backCards = document.querySelectorAll(".back-image")
          backCards.forEach(card =>{
             card.addEventListener("click", e =>{
-             card.classList.add('oculto')
-             const cardClicked = e.target.id
-             cardsFlipped.push(cardClicked)
-                console.log(cardsFlipped)
+                card.classList.add('oculto')
+                const cardClicked = e.target.id
+                cardsFlipped.push(cardClicked)
+                firstCard = card
+                firstCardId = cardClicked
 
-                        setTimeout(() =>{
-                            card.classList.remove('oculto')
-                            cardsFlipped = []
-                    }, 2000)
+               if (firstCardId == secondCardId){
+                console.log("oleee")
+                    firstCard.classList.add("oculto")
+                    secondCard.classList.add("oculto")
+                    // cardsFlipped = []
+               } else if (firstCardId !== secondCardId){
+                    setTimeout(() =>{
+                    firstCard.classList.remove("oculto")
+                    secondCard.classList.remove("oculto")
+                    })
+               }
+               secondCard = card
+               secondCardId = cardClicked     
+              
+                //      cardsFlipped = []
+                //  }
+            
+                //  if (cardsFlipped.length > 2){
+                //      cardsFlipped = []
+                //  } else if (cardsFlipped[0] == cardsFlipped[1]){
+                //     console.log("oleee")
+                //     cardsFlipped = []
+                // } else if (cardsFlipped[0] !== cardsFlipped[1]){
+                //     setTimeout(() =>{
+                //     card.classList.remove('oculto')
+                //     cardsFlipped = []
+                // }, 1000)
+                // } else if (cardsFlipped.length == 1){
+                //     setTimeout(() =>{
+                //         card.classList.remove('oculto')
+                //         cardsFlipped = []
+                //     }, 1000)
+                // }
+                
+            // card.style.display = "none"
+             console.log(cardsFlipped[0])
 
-        cardsFlipped.forEach(type =>{
-            console.log(type)
-            cardsFlipped.indexOf(type) !== cardsFlipped.lastIndexOf(type) ?  card.classList.add('oculto') : console.log("no funciona")
-        })
+            //    if (cardsFlipped.length <= 2 && cardsFlipped[0] == cardsFlipped [1]){
+            //     console.log("if")
+            // //     cardsFlipped = []
+            // //     console.log("if")
+            //    } if (cardsFlipped.length > 2){
+            //       cardsFlipped = []
+            //       card.classList.remove('oculto')
+            //    } else {
+            //     cardsFlipped = []
+                //   card.classList.remove('oculto')
+            //    }
+            //     cardsFlipped = []
+            //     card.classList.remove('oculto')
+            //   }
+                // console.log(cardsFlipped)
+
+                //         setTimeout(() =>{
+                //             // card.classList.remove('oculto')
+                //             cardsFlipped = []
+                //     }, 2000)
+
+        // cardsFlipped.forEach(type =>{
+        //     console.log(type)
+        //     cardsFlipped.indexOf(type) !== cardsFlipped.lastIndexOf(type) ? ((card.style.display = "none")) : console.log("no funciona")
+        // })
          })
             })
 }
 
 
-// const backCard = () =>{
-//     let backCards = document.querySelectorAll("card")
-//     backCards.forEach(card =>{
-//         card.src = "https://res.cloudinary.com/daxddugwt/image/upload/v1697461474/IMG_4566_qhfik5.png"
-//     })
-
-// }
-
-
-
-
-
-
-
 export const printMemoryPage = () =>{
     document.querySelector("main").innerHTML = template()
     shuffleDeck()
-     flip()
 }
