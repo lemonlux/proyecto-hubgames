@@ -292,7 +292,7 @@ deck.forEach((item, index)=>{
   let card = `
   <figure class="card">
   <img src=${cardList[item]} class="${item} front-image">
-  <img src=${"https://res.cloudinary.com/daxddugwt/image/upload/v1697461474/IMG_4566_qhfik5.png"} class="back-image">
+  <img src=${"https://res.cloudinary.com/daxddugwt/image/upload/v1697461474/IMG_4566_qhfik5.png"} id=${item} class="back-image">
   </figure>
   `
   document.getElementById("board").innerHTML +=card
@@ -301,18 +301,26 @@ deck.forEach((item, index)=>{
 }
 
 const flip = () =>{
+    let cardsFlipped = []
     const backCards = document.querySelectorAll(".back-image")
          backCards.forEach(card =>{
             card.addEventListener("click", e =>{
-             card.classList.toggle('oculto')
-             console.log(e)
+             card.classList.add('oculto')
+             const cardClicked = e.target.id
+             cardsFlipped.push(cardClicked)
+                console.log(cardsFlipped)
 
-    //             e.target.classList 
-                setTimeout(() =>{
-                    card.classList.remove('oculto')
-              }, 2000)
-            })
+                        setTimeout(() =>{
+                            card.classList.remove('oculto')
+                            cardsFlipped = []
+                    }, 2000)
+
+        cardsFlipped.forEach(type =>{
+            console.log(type)
+            cardsFlipped.indexOf(type) !== cardsFlipped.lastIndexOf(type) ?  card.classList.add('oculto') : console.log("no funciona")
+        })
          })
+            })
 }
 
 
