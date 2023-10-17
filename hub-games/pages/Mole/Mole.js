@@ -2,13 +2,19 @@ import "./Mole.css"
 
 
 const template = () =>`
+<div class="game">
+<div class="feedback">
+<h3 class="atrapalo">ATRAPA AL DIGLET</h3>
+<h3> Aciertos:     <span id="aciertos"></span></h3>
+</div>
+<div class="mole-container"></div>
+</div>
 
-<div class="mole-container"></div
 `
 
 
 const board = () =>{
-    for (let i=0; i<6; i++){
+    for (let i=0; i<9; i++){
         const square = document.createElement("div")
         square.classList.add("square")
         square.id = i
@@ -16,14 +22,8 @@ const board = () =>{
         square.append(figureDiv)
         document.querySelector(".mole-container").append(square)
     }
-}
 
-// num aleatorio
-const randomTime = (min, max) =>{
-   return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
-  // console.log(randomTime(800, 15000))
 
 
 const moleShown = () =>{
@@ -36,6 +36,15 @@ const moleShown = () =>{
     }, moleTime)
 
 }
+
+// num aleatorio
+const randomTime = (min, max) =>{
+    return Math.floor(Math.random() * (max - min + 1) + min)
+ }
+ 
+   // console.log(randomTime(800, 15000))
+
+   
 
 //querySelectorAll se comporta haciendo arrays----[]
 // const squares = document.querySelectorAll(".square")
@@ -57,6 +66,16 @@ const randomSquare = () =>{
     return squareRandom
 }
 
+let aciertos = 0
+
+const playGame = () =>{
+    aciertos = 0        //empiezas con 0 aciertos
+    document.querySelector("#aciertos").textContent = aciertos
+    moleShown()       //se muestra el topillo
+
+}
+
+
 
 
 
@@ -67,4 +86,5 @@ export const printMolePage = () =>{
     document.querySelector("main").innerHTML = template()
     board()
     randomSquare()
+    moleShown()
 }

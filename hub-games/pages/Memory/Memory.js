@@ -237,7 +237,9 @@ import "./Memory.css"
 const template = () =>
 `
 <div class="memory-game">
-<h3> Aciertos <span id="aciertos">0</span></h3>
+<div class="feedback">
+<h3> Aciertos <span id="aciertos"></span></h3>
+</div>
     <div class="game-container">
         <div id="board">
         </div>
@@ -275,12 +277,11 @@ deck = keysCardList.concat(keysCardList)
         deck[j] = deckChange
     }
     console.log(deck)
-    startGame()
+    getDeck()
     flip()
 }
 
-
-const startGame = () => {
+const getDeck = () => {
 
 deck.forEach((item, index)=>{   //el template
   
@@ -293,15 +294,16 @@ deck.forEach((item, index)=>{   //el template
   document.getElementById("board").innerHTML +=card
 
 })
-let aciertos = document.querySelector("span").textContent
-
-console.log(aciertos)
-
-let aciertosNum = parseInt(aciertos)
 }
 
+let aciertos = 0
+
+const playGame = () =>{
+    aciertos = 0
+    document.querySelector("#aciertos").textContent = aciertos
 
 
+}
 
 
 let firstCard, firstCardId
@@ -354,32 +356,10 @@ const flip = () =>{
                 
             // card.style.display = "none"
              console.log(cardsFlipped[0])
-
-            //    if (cardsFlipped.length <= 2 && cardsFlipped[0] == cardsFlipped [1]){
-            //     console.log("if")
-            // //     cardsFlipped = []
-            // //     console.log("if")
-            //    } if (cardsFlipped.length > 2){
-            //       cardsFlipped = []
-            //       card.classList.remove('oculto')
-            //    } else {
-            //     cardsFlipped = []
-                //   card.classList.remove('oculto')
-            //    }
-            //     cardsFlipped = []
-            //     card.classList.remove('oculto')
-            //   }
-                // console.log(cardsFlipped)
-
                 //         setTimeout(() =>{
                 //             // card.classList.remove('oculto')
                 //             cardsFlipped = []
                 //     }, 2000)
-
-        // cardsFlipped.forEach(type =>{
-        //     console.log(type)
-        //     cardsFlipped.indexOf(type) !== cardsFlipped.lastIndexOf(type) ? ((card.style.display = "none")) : console.log("no funciona")
-        // })
          })
             })
 }

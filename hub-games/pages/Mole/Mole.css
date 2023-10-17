@@ -1,6 +1,6 @@
 .mole-container{
-    width: 30em;
-    height: 30em;
+    width: 21em;
+    height: 21em;
     display: grid;
     align-content: center;
     justify-content: center;
@@ -10,7 +10,65 @@
 }
 
 .square{
-    width: 10em;
-    height: 10em;
-    border: 1px solid grey;
+    width: 7em;
+    height: 7em;
+    border: 1px solid #28620D;
+    position: relative;
+    background: url("https://res.cloudinary.com/daxddugwt/image/upload/v1697558172/pokemon_grass_ewelyy.jpg");
+    z-index: 0;
 }
+
+.square::after {
+    /* display: block; */
+    background: url("https://res.cloudinary.com/daxddugwt/image/upload/v1697558051/tumblr_2a895bfd7bea8771a3555ce38663cdcb_197c0ad7_1280-removebg-preview_1_qgkr3e.png")
+      bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 7em;
+    height: 7em;
+    /* width: 100%;
+    height: 90px; */
+    position: absolute;
+    z-index: 2;
+    /* display: flex;
+    justify-content: end;
+    justify-items: end; */
+    /* bottom: -14px; */
+  }
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.feedback{
+    width: 30em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 3em 0 1em;
+}
+
+.atrapalo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .mole-container { */
+    /* background: url("https://res.cloudinary.com/daxddugwt/image/upload/v1697558354/ce16eb9b-6c94-4f54-8007-289a65d13dc5-removebg-preview_cdh7ew.png")
+      bottom center no-repeat;
+    position: absolute;
+    top: 100%;
+    width: 7em;
+    height: 7em;
+    z-index: 1; */
+    /* width: 100%;
+    height: 100%; */
+
+  /* } */
+
+
