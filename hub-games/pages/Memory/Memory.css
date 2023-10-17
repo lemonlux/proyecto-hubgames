@@ -1,6 +1,6 @@
 .game-container{
-    width: 35em;
-    height: 40em;
+    width: 30em;
+    height: 37em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@
     align-content: center;
     justify-content: center;
     justify-items: center;
-    grid-template-columns: 5.5em 5.5em 5.5em 5.5em 5.5em;
+    grid-template-columns: 5em 5em 5em 5em 5em;
     /* grid-template-columns: repeat(
         auto-fit, 
         minmax(7em,1fr)
@@ -28,6 +28,7 @@
 
   .card {
     position: relative;
+    border-radius: 20%;
   }
 
 
@@ -45,12 +46,19 @@
 } */
 
 
-& .front-image, 
+.front-image{
+  width: 4.2rem;
+    height: 7.8rem;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+&
   .back-image,
 .card {
 
-    width: 5rem;
-    height: 9rem;
+    width: 4.5rem;
+    height: 8rem;
     margin: 2px;
     /* position: relative; */
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
@@ -71,3 +79,7 @@
     width: 15px;
     height: 15px;
 } */
+
+.oculto{
+  display: none;
+}
