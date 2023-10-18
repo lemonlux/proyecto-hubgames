@@ -52,11 +52,6 @@ const startGame = () =>{
 }
 
 const board = () =>{
-    // setTimeout(()=>{
-    //     timeUp = true
-    //     endGame()
-    //     printMolePage()
-    //  }, 11500)
     console.log(timeUp)
     console.log("dentro board")
     for (let i=0; i<9; i++){
@@ -68,14 +63,7 @@ const board = () =>{
         document.querySelector(".mole-container").append(square)
     }
 
-    console.log("entro???")
-    // const moleTime = randomTime(600, 1000)
-    // const moleInterval = () =>{
-    //     setInterval(()=>{
-    //     createMole()
-    // }, moleTime)
-    // whack()
-    // if (!timeUp){
+
         console.log("topilllooooooo", timeUp)
         const moleTime = randomTime(600, 1000)
         const moleInterval = () =>{
@@ -89,16 +77,7 @@ const board = () =>{
     } else {
         clearInterval(moleInterval)
     }
-    // }
-        // setInterval(()=>{
-        //     createMole()
-        // }, moleTime)
-        // moleInterval()
-// } else {
-    // if (timeUp){
-    // clearInterval(moleInterval)
-    // // moleInterval().clear()
-    // console.log("holaaaaaaaaaaaa :(")}
+
 }
 
 
@@ -177,22 +156,22 @@ const endGame = () =>{
    let winnerDiv = document.createElement("div")
    winnerDiv.classList.add("winner")
    winnerDiv.innerHTML = `
-   <div class="winner-div"> 
-   <h3> Le has dado de lleno a <span class="winner-span">${score}</span> Diglets! </h3>
-   <h3> Quieres repetir?</h3>
-   <button class="restart-mole">START GAME</button>
+   <div class="winner-mole"> 
+   <h3 class="h3-diglet"> Le has dado de lleno a <span class="winner-span">${score}</span> Diglets! </h3>
+   <img src="https://res.cloudinary.com/daxddugwt/image/upload/v1697558354/ce16eb9b-6c94-4f54-8007-289a65d13dc5-removebg-preview_cdh7ew.png"
+   alt="diglet" class="diglet-after"/>
     </div>
    `
    setTimeout(() => {
     // start.style.display = "none"
     document.querySelector(".mole-container").innerHTML = ""
     document.querySelector(".mole-container").append(winnerDiv)
-    let restartMole = document.querySelector(".restart-mole")
-    restartMole.addEventListener("click", e =>{
-        console.log("entro")
-        board()
-        counter()
-    })
+    // let restartMole = document.querySelector(".restart-mole")
+    // restartMole.addEventListener("click", e =>{
+    //     console.log("entro")
+    //     board()
+    //     counter()
+    // })
     // setTimeout(() => {
     //     console.log("hola")
     //     // document.querySelector(".game").innerHTML= ""

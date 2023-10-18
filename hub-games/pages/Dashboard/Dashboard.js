@@ -4,7 +4,7 @@ import "./Dashboard.css";
 
 const template = () => `
   <div id="containerDashboard">
-  <h1 class="start">START GAME</H1>
+  <h1 class="start" id="start-game-id">START GAME</h1>
     <ul>
       <li>
         <figure id="navigatePokemon">

@@ -54,43 +54,77 @@ h1{
   }
 
 
-  @media (min-width: 768px) and (max-width: 1280px) {
+  @media (min-width: 880px) and (max-width: 1280px) {
   
     h1{
-      font-size: 4em;
+      font-size: 3.5em;
     }
     div #logo{
-      height: 80px;
+      height: 60px;
 
+    }
+    nav ul{
+      font-size: 15px;
+    }
+    .linav{
+      width: 130px;
     }
   }  
 
-
-
-
-
-  @media (min-width: 481px) and (max-width: 767px) {
-  
+  @media (min-width: 743px) and (max-width: 880px){
     h1{
       font-size: 3em;
     }
     div #logo{
-      height: 70px;
+      height: 55px;
 
     }
+    nav ul{
+      font-size: 15px;
+    }
+    .linav{
+      width: 100px;
+    }
+  }
+  /* #header-id{
+    display: flex;
+    flex-direction: column;
+  } */
 
 
+
+  @media (min-width: 481px) and (max-width: 743px) {
+  
+    h1{
+      font-size: 2.5em;
+    }
+    div #logo{
+      height: 50px;
+
+    }
+    nav ul{
+      font-size: 15px;
+    }
+    .linav{
+      width: 100px;
+    }
 
     
   }
 
   @media (min-width: 300px) and (max-width: 480px) {
-    div #logo{
-      height: 50px;
-      
-    }
     h1{
       font-size: 2em;
+    }
+    div #logo{
+      height: 50px;
+
+    }
+    nav ul{
+      font-size: 12px;
+    }
+    .linav{
+      width: 90px;
     }
     
   }

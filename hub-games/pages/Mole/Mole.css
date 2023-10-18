@@ -6,7 +6,7 @@
     justify-content: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    border: 4px solid rgb(149, 149, 143);
+    border: 4px solid rgb(255, 255, 255);
     background: url("https://res.cloudinary.com/daxddugwt/image/upload/v1697558172/pokemon_grass_ewelyy.jpg");
     z-index: 0;
 }
@@ -71,7 +71,57 @@
     cursor: crosshair;
 }
 
+.winner-mole{
+    margin: 1em;
+    padding: 0.5em;
+    display: flex;
+    flex-flow: row;
+    width: 21em;
+    height: 8em;
+    background-color: rgba(29, 29, 29, 0.318);
+    border: dashed 3px rgb(70, 70, 66);
+}
+
+.diglet-after{
+    width: 8em;
+    height: 8em;
+    padding: 0 0 1em 0;
+}
+
+.h3-diglet{
+padding: 1.5em 0 0 1em;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(245, 240, 233)
+}
+
+
+
+.start-button{
+    grid-column: 2/3
+}
 
 
 
 
+@media (min-width: 880px) and (max-width: 1280px) {
+  
+
+}  
+
+@media (min-width: 743px) and (max-width: 880px){
+
+}
+
+
+
+@media (min-width: 481px) and (max-width: 743px) {
+  
+
+  
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+
+  
+}

@@ -17,16 +17,16 @@ const template = () =>
 
 
 let cardList = {
-    grass: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461476/IMG_4565_awl5qy.png",
-    electric: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461475/IMG_4561_kykxva.png",
-    water: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461472/IMG_4557_yb7pyl.png",
-    fire: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461472/IMG_4556_fjxsyi.png",
-    psychic: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461472/IMG_4559_yy16ve.png",
-    normal: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461472/IMG_4560_kcm4l9.png",
-    dragon: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461470/IMG_4558_bjqbfk.png",
-    poison: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461470/IMG_4562_ksnmhk.png",
-    magic: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461470/IMG_4554_jkri6n.png",
-    ice: "https://res.cloudinary.com/daxddugwt/image/upload/v1697461469/IMG_4555_knqwpc.png"
+    grass: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652897/IMG_4582_l29w3q.png",
+    electric: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652897/IMG_4586_p3rdvf.png",
+    water: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652897/IMG_4578_zhkubg.png",
+    fire: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652897/IMG_4583_oh34ju.png",
+    psychic: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652898/IMG_4587_pxdazy.png",
+    normal: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652897/IMG_4579_ay47il.png",
+    dragon: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652898/IMG_4584_iz33xt.png",
+    poison: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652897/IMG_4580_zhgzkq.png",
+    magic: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652897/IMG_4581_xev16r.png",
+    ice: "https://res.cloudinary.com/daxddugwt/image/upload/v1697652898/IMG_4585_i2bh3p.png"
 }
 
 const keysCardList = Object.keys(cardList) // array de tipos

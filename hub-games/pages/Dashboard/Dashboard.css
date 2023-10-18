@@ -21,10 +21,6 @@
     height: 10em;
   }
 
-  .dashboardimg{
-    width: 10em;
-    height: 10em;
-  }
   #figure-memory{
     width: 6em;
     height: 9em;
@@ -64,4 +60,89 @@ h2:hover{
 
 h2:hover::before{
   content: "➤  ";
+}
+
+
+
+@media (min-width: 880px) and (max-width: 1280px) {
+
+
+  
+
+}  
+
+@media (min-width: 743px) and (max-width: 880px){
+  .start{
+  font-size: 3.5em;
+  margin: 25px 0 0 0;
+  }
+
+  #mole{
+    height: 8em;
+    width: 10em;
+  }
+
+  #pokeball{
+ width: 8em;
+    height: 8em;
+  }
+
+  #figure-memory{
+    width: 5em;
+    height: 8em;
+    margin: 0 0 1em 0;
+  }
+
+}
+
+
+
+@media (min-width: 481px) and (max-width: 743px) {
+
+  #start-game-id{
+    font-size: 3em;
+    margin: 20px 0 0 0;
+    }
+
+  #mole{
+    height: 8em;
+    width: 10em;
+  }
+
+  #pokeball{
+ width: 8em;
+    height: 8em;
+  }
+
+  #figure-memory{
+    width: 5em;
+    height: 8em;
+    margin: 0 0 1em 0;
+  }
+  
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+
+  #start-game-id{
+    font-size: 3em;
+    margin: 20px 0 0 0;
+    }
+
+  #mole{
+    height: 6em;
+    width: 7.5em;
+  }
+
+  #pokeball{
+ width: 6em;
+    height: 6em;
+  }
+
+  #figure-memory{
+    width: 3.5em;
+    height: 6em;
+    margin: 0 0 1em 0;
+  }
+  
 }
