@@ -1,13 +1,13 @@
 .game-container{
-    width: 30em;
-    height: 37em;
+    width: 28em;
+    height: 32em;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 #board {
-    padding: 0 2em 2em 2em;
+    padding: 0 1em 1em 1em;
     display: grid;
     align-content: center;
     justify-content: center;
@@ -17,8 +17,28 @@
         auto-fit, 
         minmax(7em,1fr)
     ); */
-    width: 30em;
-    height: 35em;
+    width: 25em;
+    height: 32em;
+}
+
+.feedback-memory{
+  padding: 2em 0 1em 3em;
+  width: 28em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+
+.winner-div{
+  /* position: absolute;
+  bottom: 400px;
+  left: 400px; */
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
+  width: 12em;
+  border: dashed 4px rgb(151, 28, 28);
 }
 
 & .front-image, 
@@ -49,7 +69,7 @@
 
 .front-image{
   width: 4.2rem;
-    height: 7.8rem;
+    height: 7.5rem;
     margin: 2px;
     border-radius: 10px;
 }
@@ -58,8 +78,8 @@
   .back-image,
 .card {
 
-    width: 4.5rem;
-    height: 8rem;
+    width: 4.3rem;
+    height: 7.6rem;
     margin: 2px;
     /* position: relative; */
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
@@ -83,3 +103,12 @@
 .oculto{
   display: none;
 }
+
+
+
+/*BORRAR ESTOOOOOOOOOOOO*/ 
+
+/* .back-image{
+  width:3rem;
+    height: 7rem;
+} */

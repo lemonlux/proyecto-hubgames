@@ -1,8 +1,7 @@
 import { getUser } from "../global/state/globalState";
 import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
-import { printMemoryPage } from "/Users/lucia/Desktop/FT WEB/09/FT WEB/proyecto-hubgames/hub-games/pages/Memory/Memory.js";
-import { printTicTacToePage } from "../pages/TicTacToe/TicTacToe.js";
-import { printMolePage } from "/Users/lucia/Desktop/FT WEB/09/FT WEB/proyecto-hubgames/hub-games/pages/Mole/Mole.js";
+import { printMemoryPage } from "../pages/Memory/Memory.js";
+import { printMolePage } from "../pages/Mole/Mole.js";
 
 
 //! ----------------------------------------------------------------------------------------------------------------------

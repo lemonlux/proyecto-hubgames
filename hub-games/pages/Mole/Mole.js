@@ -140,63 +140,14 @@ const endGame = () =>{
     document.querySelector(".mole-container").append(winnerDiv)
     setTimeout(() => {
         console.log("hola")
-        document.querySelector(".mole-container").innerHTML= ""
-        printMolePage()
+        document.querySelector("main").innerHTML= ""
+        document.querySelector("main").innerHTML = template()
+        startGame()
     }, 3000);
    }, 300);
    
 }
 }
-
-
-
-
-
-// const moleShown = () =>{
-//     const moleTime = randomTime(800, 15000)   // tiempo que asoma
-//     let moleSquare 
-//     const squareToBeShown = randomSquare(document.querySelectorAll(".square"))
-
-//     setTimeout(()=>{
-//         squareToBeShown.classList.add("seen")
-//     }, moleTime)
-// }
-
-
-
-//querySelectorAll se comporta haciendo arrays----[]
-// const squares = document.querySelectorAll(".square")
-// const squaresLength = squares.length
-// console.log(squaresLength)
-// console.log("hola")
-
-
-
-// const randomSquare = () =>{
-//     const squares = document.querySelectorAll(".square")
-//     const randomNum = Math.floor(Math.random() * squares.length)
-//     const squareRandom = squares[randomNum]
-//     // squareRandom --- si el topo ha salido la vez anterior por el mismo lao? pues hazlo otra vez
-//     (squareRandom == lastSquare) && randomSquare(squares)   
-//     lastSquare = squareRandom
-
-//     return squareRandom
-// }
-
-
-
-
-
-
-// let aciertos = 0
-
-// const playGame = () =>{
-//     aciertos = 0        //empiezas con 0 aciertos
-//     document.querySelector("#aciertos").textContent = aciertos
-//     moleShown()       //se muestra el topillo
-
-// }
-
 
 
 
