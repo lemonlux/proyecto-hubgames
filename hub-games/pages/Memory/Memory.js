@@ -313,28 +313,32 @@ const flip = () =>{
     let cardsFlipped = []
     const backCards = document.querySelectorAll(".back-image")
          backCards.forEach(card =>{
-            card.addEventListener("click", e =>{
-                card.classList.add('oculto')
-                const cardClicked = e.target.id
-                firstCard = card
-                firstCardId = cardClicked
-                cardsFlipped.push(firstCardId)
-                setTimeout(() =>{
-                if (cardsFlipped[0] == cardsFlipped[1]){
-                    // console.log(cardsFlipped[0], cardsFlipped[1])
-
-                } else if (cardsFlipped[0] !== cardsFlipped[1]){
-                    // console.log(cardsFlipped)
-                    // console.log(firstCard)
-                    // console.log(secondCard)
+            card.addEventListener("click", (e) => {
+                let allFlipped = document.querySelectorAll(".flipped");
+                if (allFlipped.length < 2) {
+                  card.classList.add("oculto");
+                  const cardClicked = e.target.id;
+                  firstCard = card;
+                  firstCardId = cardClicked;
+                  cardsFlipped.push(firstCardId);
+                  card.parentElement.classList.add("flipped");
                 }
-                card.classList.remove('oculto')
-                 cardsFlipped = []
-            }, 2000)
-        
-
-            secondCard = card
-            secondCardId = cardClicked
+                allFlipped = document.querySelectorAll(".flipped");
+                if (allFlipped.length === 2) {
+                  if (
+                    allFlipped[0].childNodes[1].src === allFlipped[1].childNodes[1].src
+                  ) {
+                    allFlipped[0].classList = "card win";
+                    allFlipped[1].classList = "card win";
+                  } else {
+                    setTimeout(() => {
+                      allFlipped[0].childNodes[3].classList.remove("oculto");
+                      allFlipped[0].classList = "card";
+                      allFlipped[1].childNodes[3].classList.remove("oculto");
+                      allFlipped[1].classList = "card";
+                    }, 500);
+                  }
+                }
         })
     })
 }

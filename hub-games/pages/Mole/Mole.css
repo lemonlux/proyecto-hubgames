@@ -7,6 +7,8 @@
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     border: 4px solid rgb(149, 149, 143);
+    background: url("https://res.cloudinary.com/daxddugwt/image/upload/v1697558172/pokemon_grass_ewelyy.jpg");
+    z-index: 0;
 }
 
 .square{

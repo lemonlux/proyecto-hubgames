@@ -25,21 +25,27 @@ setInterval(()=>{
 }
 } 
 
-
+let timeUp = false
+let score = 0
+let start = document.createElement("button")
+start.textContent = "START GAME"
+start.id = "start-button"
 
 const startGame = () =>{
-    let start = document.createElement("button")
-    start.textContent = "START GAME"
-    start.id = "start-button"
+    timeUp = false
+    score=0
+
     document.querySelector(".mole-container").append(start)
     start.addEventListener("click", e =>{
         // document.getElementById("time").append(counter)
-        // setTimeout(()=>{
-            board()
+             board()
             start.style.display = "none"
             counter()
-        // }, 3000)
-        
+         setTimeout(()=>{
+            timeUp = true
+            endGame()
+            printMolePage()
+         }, 11500)
     })
 }
 
@@ -53,7 +59,7 @@ const board = () =>{
         document.querySelector(".mole-container").append(square)
     }
 
-    const moleTime = randomTime(800, 1500)
+    const moleTime = randomTime(600, 1000)
     setInterval(()=>{
         createMole()
     }, moleTime)
@@ -77,46 +83,69 @@ let currentMoleSquare
 let lastSquare
 let mole
 
-const createMole = () =>{
-    if (currentMoleSquare){
-        currentMoleSquare.innerHTML = ""
+const createMole = () => {
+    let okImagePrintScreen = document.getElementById("mole-game");
+  
+    mole = document.createElement("img");
+    mole.src =
+      "https://res.cloudinary.com/daxddugwt/image/upload/v1697558354/ce16eb9b-6c94-4f54-8007-289a65d13dc5-removebg-preview_cdh7ew.png";
+    mole.alt = "topo";
+    mole.id = "mole-game";
+  
+    let num = randomNum();
+  
+    // console.log(okImagePrintScreen);      //el topo no aparece dos veces por el mismo agujero
+    if (okImagePrintScreen) {
+      while (parseInt(okImagePrintScreen.parentNode.id) === num) {
+        num = randomNum();
+      }
+    }
+  
+    if (currentMoleSquare) {     //borro el tablero 
+      currentMoleSquare.innerHTML = "";
     }
 
-    // if (currentMoleSquare == lastSquare){                //!-----
-    //     createMole(currentMoleSquare)
-    // }
+    currentMoleSquare = document.getElementById(num);
+    currentMoleSquare.append(mole);
+    lastSquare = document.getElementById(num);
+  };
 
-    mole = document.createElement("img")
-    mole.src = "https://res.cloudinary.com/daxddugwt/image/upload/v1697558354/ce16eb9b-6c94-4f54-8007-289a65d13dc5-removebg-preview_cdh7ew.png"
-    mole.alt = "topo"
-    mole.id = "mole-game"
-
-    let num = randomNum()
-    currentMoleSquare = document.getElementById(num)
-    currentMoleSquare.append(mole)
-
-    lastSquare = document.getElementById(num)
-}
-
-let score = 0
 
 const whack = () =>{
-    
+    score = 0
     const squares = document.querySelectorAll(".square")
     squares.forEach(square =>{
         square.addEventListener("click", e =>{
-            console.log(e.target)
+            // console.log(e.target)
             if (e.target == mole){
-                console.log("toma topo!!!")
+                // console.log("toma topo!!!")
                 score += 1
                 document.getElementById("score").innerText = score.toString()
-
-            }
+              }
         })
+  })
+}
 
-    })
+
+
+const endGame = () =>{
+  if (timeUp){
+   let winnerDiv = document.createElement("div")
+   winnerDiv.classList.add("winner")
+   winnerDiv.innerHTML = `
+   <h3> Le has dado de lleno a <span class="winner-span">${score}</span> Diglets! </h3>
+   `
+   setTimeout(() => {
+    start.style.display = "none"
+    document.querySelector(".mole-container").append(winnerDiv)
+    setTimeout(() => {
+        console.log("hola")
+        document.querySelector(".mole-container").innerHTML= ""
+        printMolePage()
+    }, 3000);
+   }, 300);
    
-
+}
 }
 
 
@@ -159,14 +188,14 @@ const whack = () =>{
 
 
 
-let aciertos = 0
+// let aciertos = 0
 
-const playGame = () =>{
-    aciertos = 0        //empiezas con 0 aciertos
-    document.querySelector("#aciertos").textContent = aciertos
-    moleShown()       //se muestra el topillo
+// const playGame = () =>{
+//     aciertos = 0        //empiezas con 0 aciertos
+//     document.querySelector("#aciertos").textContent = aciertos
+//     moleShown()       //se muestra el topillo
 
-}
+// }
 
 
 
