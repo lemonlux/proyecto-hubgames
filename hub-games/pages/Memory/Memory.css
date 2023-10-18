@@ -13,10 +13,6 @@
     justify-content: center;
     justify-items: center;
     grid-template-columns: 5em 5em 5em 5em 5em;
-    /* grid-template-columns: repeat(
-        auto-fit, 
-        minmax(7em,1fr)
-    ); */
     width: 25em;
     height: 32em;
 }
@@ -31,14 +27,24 @@
 
 
 .winner-div{
-  /* position: absolute;
-  bottom: 400px;
-  left: 400px; */
   padding: 1em;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: column;
-  width: 12em;
-  border: dashed 4px rgb(151, 28, 28);
+  width: 20em;
+  gap: 1em;
+}
+
+.restart-memory{
+  width: 10em;
+  height: 2em;
+  font-size: 23px;
+  font-weight: 400;
+  font-family: 'Pixelify Sans', cursive;
+  background-color: rgba(78, 75, 67, 0.742);
+  color:rgb(237, 233, 219);
+  border: outset 3px;
 }
 
 & .front-image, 
@@ -54,21 +60,8 @@
 
 
 
-/* .back-image{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    -webkit-box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65);
-    -moz-box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65);
-    box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65);
-
-} */
-
-
 .front-image{
-  width: 4.2rem;
+  width: 4.7rem;
     height: 7.5rem;
     margin: 2px;
     border-radius: 10px;
@@ -78,60 +71,220 @@
   .back-image,
 .card {
 
-    width: 4.3rem;
+    width: 4.7rem;
     height: 7.6rem;
     margin: 2px;
-    /* position: relative; */
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-    /* max-width: 5em;
-    margin: 2.5px;
-    border-radius: 5%;
-    -webkit-box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65);
-    -moz-box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65);
-    box-shadow: 9px 8px 3px -6px rgba(0,0,0,0.65); */
 }
 
 .card:hover{
     transform: scale(0.97)
 }
 
-/* img{
-    width: 15px;
-    height: 15px;
-} */
-
 .oculto{
   display: none;
 }
 
+#jiggly{
+  width: 6rem;
+}
 
 
-/*BORRAR ESTOOOOOOOOOOOO*/ 
+@media (min-width: 880px) and (max-width: 1100px) {
+  .game-container{
+    width: 25em;
+    height: 30em;
+  }
+#board{
+  width: 20em;
+  height: 25em;
+  grid-template-columns: 4em 4em 4em 4em 4em;
+  gap: 1px
 
-/* .back-image{
-  width:3rem;
+}
+.feedback-memory{
+  padding: 2em 0 1em 3em;
+  width: 20em;
+  height: 2em;
+}
+
+.winner-div{
+  width: 20em;
+}
+
+.restart-memory{
+  width: 10em;
+  height: 2em;
+  font-size: 23px;
+  font-weight: 400;
+}
+.front-image{
+  width: 4.3rem;
     height: 7rem;
-} */
 
+}
 
-@media (min-width: 880px) and (max-width: 1280px) {
-  
+&
+  .back-image,
+.card {
+
+    width: 4.3rem;
+    height: 7rem;
+    margin: 2px;
 
 }  
+#jiggly{
+  width: 6rem;
+}
+
+}
 
 @media (min-width: 743px) and (max-width: 880px){
+  .game-container{
+    width: 25em;
+    height: 28em;
+  }
+#board{
+  width: 20em;
+  height: 25em;
+  grid-template-columns: 4em 4em 4em 4em 4em;
+  gap: 1px
+}
+.feedback-memory{
+  padding: 2em 0 1em 3em;
+  width: 15em;
+  height: 2em;
+}
+
+.winner-div{
+  width: 20em;
+}
+
+.restart-memory{
+  width: 10em;
+  height: 2em;
+  font-size: 23px;
+  font-weight: 400;
+}
+.front-image{
+  width: 4rem;
+    height: 6.5rem;
+
+}
+
+&
+  .back-image,
+.card {
+
+    width: 4rem;
+    height: 6.5rem;
+    margin: 2px;
+
+}  
+#jiggly{
+  width: 6rem;
+}
+
 
 }
 
 
 
 @media (min-width: 481px) and (max-width: 743px) {
-  
+  .game-container{
+    width: 22em;
+    height: 28em;
+  }
+#board{
+  width: 20em;
+  height: 25em;
+  grid-template-columns: 4em 4em 4em 4em 4em;
+  gap: 1px
+;
+}
+.feedback-memory{
+  padding: 2em 0 1em 3em;
+  width: 15em;
+  height: 2em;
+}
+
+.winner-div{
+  width: 20em;
+}
+
+.restart-memory{
+  width: 10em;
+  height: 2em;
+  font-size: 23px;
+  font-weight: 400;
+}
+.front-image{
+  width: 4rem;
+    height: 6.5rem;
+
+}
+
+&
+  .back-image,
+.card {
+
+    width: 4rem;
+    height: 6.5rem;
+    margin: 2px;
+
+}  
+#jiggly{
+  width: 6rem;
+}
 
   
 }
 
 @media (min-width: 300px) and (max-width: 480px) {
+  .game-container{
+    width: 18em;
+    height: 25em;
+  }
+#board{
+  width: 15em;
+  height: 22em;
+  grid-template-columns: 3em 3em 3em 3em 3em;
+
+}
+.feedback-memory{
+  padding: 1em 0 0 2em;
+  width: 15em;
+  height: 2em;
+}
+
+.winner-div{
+  width: 15em;
+}
+
+.restart-memory{
+  width: 8em;
+  height: 2em;
+  font-size: 18px;
+  font-weight: 400;
+}
+.front-image{
+  width: 2.9rem;
+    height: 4.5rem;
+
+}
+
+&
+  .back-image,
+.card {
+
+    width: 2.9rem;
+    height: 4.5rem;
+    margin: 1px;
+
+}  
+#jiggly{
+  width: 4rem;
+}
 
   
 }

@@ -128,6 +128,7 @@ const endGame = (score) =>{
    <div class="winner-div"> 
    <h3>Has ganado! Quieres repetir?</h3>
    <button class="restart-memory">START GAME</button>
+   <img src="https://res.cloudinary.com/daxddugwt/image/upload/v1697659544/jigglypuff-removebg-preview_befbzi.png" id="jiggly" alt="jigglypuff"/>
     </div>
    `
    document.querySelector(".game-container").append(winnerDiv)

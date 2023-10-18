@@ -157,7 +157,7 @@ const endGame = () =>{
    winnerDiv.classList.add("winner")
    winnerDiv.innerHTML = `
    <div class="winner-mole"> 
-   <h3 class="h3-diglet"> Le has dado de lleno a <span class="winner-span">${score}</span> Diglets! </h3>
+   <h3 class="h3-diglet"> Le has dado de lleno a <span class="winner-span">${score.toString()}</span> Diglets! </h3>
    <img src="https://res.cloudinary.com/daxddugwt/image/upload/v1697558354/ce16eb9b-6c94-4f54-8007-289a65d13dc5-removebg-preview_cdh7ew.png"
    alt="diglet" class="diglet-after"/>
     </div>

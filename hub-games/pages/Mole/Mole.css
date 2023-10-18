@@ -1,6 +1,6 @@
 .mole-container{
-    width: 21em;
-    height: 21em;
+    width: 24em;
+    height: 24em;
     display: grid;
     align-content: center;
     justify-content: center;
@@ -11,9 +11,22 @@
     z-index: 0;
 }
 
+#start-button{
+    position: absolute;
+   top: 50vh;
+    width: 15em;
+    height: 3em;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Pixelify Sans', cursive;
+    background-color: rgba(78, 75, 67, 0.742);
+    color:rgb(237, 233, 219);
+    border: outset 3px;
+}
+
 .square{
-    width: 7em;
-    height: 7em;
+    width: 8em;
+    height: 8em;
     border: 1px solid #28620D;
     position: relative;
     background: url("https://res.cloudinary.com/daxddugwt/image/upload/v1697558172/pokemon_grass_ewelyy.jpg");
@@ -26,8 +39,8 @@
       bottom center no-repeat;
     background-size: contain;
     content: "";
-    width: 7em;
-    height: 7em;
+    width: 8em;
+    height: 8em;
     /* width: 100%;
     height: 90px; */
     position: absolute;
@@ -47,8 +60,8 @@
 }
 
 .feedback{
-    width: 30em;
-    height: 5em;
+    width: 24em;
+    height: 7em;
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -110,18 +123,107 @@ padding: 1.5em 0 0 1em;
 }  
 
 @media (min-width: 743px) and (max-width: 880px){
-
+ 
 }
 
 
 
 @media (min-width: 481px) and (max-width: 743px) {
   
+    .mole-container{
+        width: 21em;
+        height: 21em;
+    }
 
-  
+    .square{
+        width: 7em;
+        height: 7em;
+    }
+    .square::after {
+        width: 7em;
+        height: 7em;
+    }
+
+    .feedback{
+        width: 18em;
+        height: 4em;
+    }
+    .winner-mole{
+        margin: 1em;
+        padding: 0.5em;
+        width: 18em;
+        height: 7em;
+    }
+    .diglet-after{
+        width: 6em;
+        height: 6em;
+    }
+    
+    .h3-diglet{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    #start-button{
+        width: 8em;
+        height: 3em;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
 }
 
 @media (min-width: 300px) and (max-width: 480px) {
 
-  
+    .mole-container{
+        width: 18em;
+        height: 18em;
+    }
+
+    .square{
+        width: 6em;
+        height: 6em;
+    }
+    .square::after {
+        width: 6em;
+        height: 6em;
+    }
+
+    .feedback{
+        width: 20em;
+        height: 4em;
+    }
+    .winner-mole{
+        margin: 1em;
+        padding: 0.5em;
+        width: 15em;
+        height: 6em;
+    }
+    .diglet-after{
+        width: 5em;
+        height: 5em;
+    }
+    
+    .h3-diglet{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    #start-button{
+        width: 8em;
+        height: 3em;
+        font-size: 20px;
+        font-weight: 400;
+}
+}
+
+#time{
+    padding: 0 0 0 0.5em;
+    color: red;
+    font-weight: 600;
+}
+
+
+#score{
+    padding: 0 0 0 0.5em;
+    color: rgb(0, 26, 255);
+    font-weight: 600;
 }
