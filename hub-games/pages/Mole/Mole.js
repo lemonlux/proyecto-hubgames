@@ -58,12 +58,16 @@ const board = () =>{
         square.append(figureDiv)
         document.querySelector(".mole-container").append(square)
     }
-
+    if (!timeUp){
+        console.log("entro???")
     const moleTime = randomTime(600, 1000)
     setInterval(()=>{
         createMole()
     }, moleTime)
     whack()
+} else {
+    console.log("holaaaaaaaaaaaa :(")
+}
 }
 
 // num aleatorio
@@ -93,7 +97,9 @@ const createMole = () => {
     mole.id = "mole-game";
   
     let num = randomNum();
-  
+
+   
+
     // console.log(okImagePrintScreen);      //el topo no aparece dos veces por el mismo agujero
     if (okImagePrintScreen) {
       while (parseInt(okImagePrintScreen.parentNode.id) === num) {
@@ -104,10 +110,13 @@ const createMole = () => {
     if (currentMoleSquare) {     //borro el tablero 
       currentMoleSquare.innerHTML = "";
     }
-
+    if (!timeUp){
     currentMoleSquare = document.getElementById(num);
     currentMoleSquare.append(mole);
     lastSquare = document.getElementById(num);
+} else{
+    endGame()
+}
   };
 
 
@@ -133,17 +142,28 @@ const endGame = () =>{
    let winnerDiv = document.createElement("div")
    winnerDiv.classList.add("winner")
    winnerDiv.innerHTML = `
+   <div class="winner-div"> 
    <h3> Le has dado de lleno a <span class="winner-span">${score}</span> Diglets! </h3>
+   <h3> Quieres repetir?</h3>
+   <button class="restart-mole">START GAME</button>
+    </div>
    `
    setTimeout(() => {
-    start.style.display = "none"
+    // start.style.display = "none"
+    document.querySelector(".mole-container").innerHTML = ""
     document.querySelector(".mole-container").append(winnerDiv)
-    setTimeout(() => {
-        console.log("hola")
-        document.querySelector("main").innerHTML= ""
-        document.querySelector("main").innerHTML = template()
-        startGame()
-    }, 3000);
+    let restartMole = document.querySelector(".restart.mole")
+    restartMole.addEventListener("click", e =>{
+        console.log("entro")
+        board()
+        counter()
+    })
+    // setTimeout(() => {
+    //     console.log("hola")
+    //     // document.querySelector(".game").innerHTML= ""
+    //     // document.querySelector("main").innerHTML = template()
+    //     // startGame()
+    // }, 3000);
    }, 300);
    
 }
