@@ -15,6 +15,7 @@ export const Paginacion = (data, numberElement) => {
     const allButton = document.querySelectorAll(".buttonPaginacion");
     allButton.forEach((pag) => {
       pag.style.border = "solid 3px #0000006d ";
+      pag.style.cursor = "pointer"
     });
     allButton[0].style.border = "solid 3px #DE2A40 ";
     allButton[0].style.color = " #083905ff";

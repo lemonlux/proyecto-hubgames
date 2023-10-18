@@ -45,7 +45,8 @@ h1{
     font-size: 1.2em;
   }
 .linav:hover{
-  transform: scale(1.1)
+  transform: scale(1.1);
+  cursor: pointer;
 }
   .linav:hover::before{
     content: "➤  "

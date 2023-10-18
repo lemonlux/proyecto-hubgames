@@ -65,6 +65,9 @@ span:hover{
   color: rgb(248, 242, 242);
 
 }
+.material-symbols-outlined:hover{
+  cursor: pointer;
+}
 
 .like {
   color: rgb(195, 5, 5);
