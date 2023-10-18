@@ -7,6 +7,7 @@
   height: 15vh;
   background-color: #DE2A40;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   -webkit-box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.66);
@@ -50,4 +51,46 @@ h1{
 }
   .linav:hover::before{
     content: "➤  "
+  }
+
+
+  @media (min-width: 768px) and (max-width: 1280px) {
+  
+    h1{
+      font-size: 4em;
+    }
+    div #logo{
+      height: 80px;
+
+    }
+  }  
+
+
+
+
+
+  @media (min-width: 481px) and (max-width: 767px) {
+  
+    h1{
+      font-size: 3em;
+    }
+    div #logo{
+      height: 70px;
+
+    }
+
+
+
+    
+  }
+
+  @media (min-width: 300px) and (max-width: 480px) {
+    div #logo{
+      height: 50px;
+      
+    }
+    h1{
+      font-size: 2em;
+    }
+    
   }

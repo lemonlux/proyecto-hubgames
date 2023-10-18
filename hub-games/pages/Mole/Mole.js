@@ -32,17 +32,19 @@ start.textContent = "START GAME"
 start.id = "start-button"
 
 const startGame = () =>{
-    timeUp = false
     score=0
 
     document.querySelector(".mole-container").append(start)
     start.addEventListener("click", e =>{
         // document.getElementById("time").append(counter)
-             board()
+             if (!timeUp){
+            board()
+        }
             start.style.display = "none"
             counter()
          setTimeout(()=>{
             timeUp = true
+            console.log("settimeout", timeUp)
             endGame()
             printMolePage()
          }, 11500)
@@ -50,6 +52,13 @@ const startGame = () =>{
 }
 
 const board = () =>{
+    // setTimeout(()=>{
+    //     timeUp = true
+    //     endGame()
+    //     printMolePage()
+    //  }, 11500)
+    console.log(timeUp)
+    console.log("dentro board")
     for (let i=0; i<9; i++){
         const square = document.createElement("div")
         square.classList.add("square")
@@ -58,17 +67,40 @@ const board = () =>{
         square.append(figureDiv)
         document.querySelector(".mole-container").append(square)
     }
+
+    console.log("entro???")
+    // const moleTime = randomTime(600, 1000)
+    // const moleInterval = () =>{
+    //     setInterval(()=>{
+    //     createMole()
+    // }, moleTime)
+    // whack()
+    // if (!timeUp){
+        console.log("topilllooooooo", timeUp)
+        const moleTime = randomTime(600, 1000)
+        const moleInterval = () =>{
+            setInterval(()=>{
+            createMole()
+        }, moleTime)
+    }
     if (!timeUp){
-        console.log("entro???")
-    const moleTime = randomTime(600, 1000)
-    setInterval(()=>{
-        createMole()
-    }, moleTime)
-    whack()
-} else {
-    console.log("holaaaaaaaaaaaa :(")
+        moleInterval()
+        whack()
+    } else {
+        clearInterval(moleInterval)
+    }
+    // }
+        // setInterval(()=>{
+        //     createMole()
+        // }, moleTime)
+        // moleInterval()
+// } else {
+    // if (timeUp){
+    // clearInterval(moleInterval)
+    // // moleInterval().clear()
+    // console.log("holaaaaaaaaaaaa :(")}
 }
-}
+
 
 // num aleatorio
 const randomTime = (min, max) =>{
@@ -88,6 +120,9 @@ let lastSquare
 let mole
 
 const createMole = () => {
+    if (timeUp){
+        return
+    }
     let okImagePrintScreen = document.getElementById("mole-game");
   
     mole = document.createElement("img");
@@ -152,7 +187,7 @@ const endGame = () =>{
     // start.style.display = "none"
     document.querySelector(".mole-container").innerHTML = ""
     document.querySelector(".mole-container").append(winnerDiv)
-    let restartMole = document.querySelector(".restart.mole")
+    let restartMole = document.querySelector(".restart-mole")
     restartMole.addEventListener("click", e =>{
         console.log("entro")
         board()
