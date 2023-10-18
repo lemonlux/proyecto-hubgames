@@ -7,7 +7,7 @@ import "./darkMode.css"
                                   // template con logo, dashboard, colorchange y logout
 const template = () => `         
     <div id="pokedex-logo">
-        <img src="https://res.cloudinary.com/daxddugwt/image/upload/v1696760751/jgsl4y6xcbllsxzx4z7l.png" alt="logo" id="logo"/>
+        <img src="https://res.cloudinary.com/daxddugwt/image/upload/v1697564509/___6_-removebg-preview_rqushm.png" alt="logo" id="logo"/>
         <h1>POKEGAMES</h1>
     </div>
     <nav>

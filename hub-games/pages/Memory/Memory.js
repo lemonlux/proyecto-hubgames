@@ -237,7 +237,7 @@ import "./Memory.css"
 const template = () =>
 `
 <div class="memory-game">
-<div class="feedback">
+<div class="feedback-memory">
 <h3> Aciertos <span id="aciertos"></span></h3>
 </div>
     <div class="game-container">
@@ -316,23 +316,53 @@ const flip = () =>{
             card.addEventListener("click", e =>{
                 card.classList.add('oculto')
                 const cardClicked = e.target.id
-                cardsFlipped.push(cardClicked)
                 firstCard = card
                 firstCardId = cardClicked
+                cardsFlipped.push(firstCardId)
+                setTimeout(() =>{
+                if (cardsFlipped[0] == cardsFlipped[1]){
+                    // console.log(cardsFlipped[0], cardsFlipped[1])
 
-               if (firstCardId == secondCardId){
-                console.log("oleee")
-                    firstCard.classList.add("oculto")
-                    secondCard.classList.add("oculto")
-                    // cardsFlipped = []
-               } else if (firstCardId !== secondCardId){
-                    setTimeout(() =>{
-                    firstCard.classList.remove("oculto")
-                    secondCard.classList.remove("oculto")
-                    })
-               }
-               secondCard = card
-               secondCardId = cardClicked     
+                } else if (cardsFlipped[0] !== cardsFlipped[1]){
+                    // console.log(cardsFlipped)
+                    // console.log(firstCard)
+                    // console.log(secondCard)
+                }
+                card.classList.remove('oculto')
+                 cardsFlipped = []
+            }, 2000)
+        
+
+            secondCard = card
+            secondCardId = cardClicked
+        })
+    })
+}
+
+
+export const printMemoryPage = () =>{
+    document.querySelector("main").innerHTML = template()
+    shuffleDeck()
+}
+
+
+
+
+
+
+            //    if (firstCardId == secondCardId){
+            //     console.log("oleee")
+            //         firstCard.classList.add("oculto")
+            //         secondCard.classList.add("oculto")
+            //         // cardsFlipped = []
+            //    } else if (firstCardId !== secondCardId){
+            //         setTimeout(() =>{
+            //         firstCard.classList.remove("oculto")
+            //         secondCard.classList.remove("oculto")
+            //         })
+            //    }
+            //    secondCard = card
+            //    secondCardId = cardClicked     
               
                 //      cardsFlipped = []
                 //  }
@@ -355,17 +385,9 @@ const flip = () =>{
                 // }
                 
             // card.style.display = "none"
-             console.log(cardsFlipped[0])
+            //  console.log(cardsFlipped[0])
                 //         setTimeout(() =>{
                 //             // card.classList.remove('oculto')
                 //             cardsFlipped = []
                 //     }, 2000)
-         })
-            })
-}
 
-
-export const printMemoryPage = () =>{
-    document.querySelector("main").innerHTML = template()
-    shuffleDeck()
-}

@@ -12,7 +12,7 @@ const template = () => `
             src="https://res.cloudinary.com/daxddugwt/image/upload/v1697548361/Untitled_Artwork_15-removebg-preview_fmqnhz.png"
             alt="go to page pokemon"
           />
-          <h2>POKEMON</h2>
+          <h2>POKEDEX</h2>
         </figure>
       </li>
       <li>
