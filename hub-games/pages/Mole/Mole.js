@@ -112,9 +112,7 @@ const createMole = () => {
   
     let num = randomNum();
 
-   
-
-    // console.log(okImagePrintScreen);      //el topo no aparece dos veces por el mismo agujero
+                                          //el topo no aparece dos veces por el mismo agujero
     if (okImagePrintScreen) {
       while (parseInt(okImagePrintScreen.parentNode.id) === num) {
         num = randomNum();
@@ -163,21 +161,8 @@ const endGame = () =>{
     </div>
    `
    setTimeout(() => {
-    // start.style.display = "none"
     document.querySelector(".mole-container").innerHTML = ""
     document.querySelector(".mole-container").append(winnerDiv)
-    // let restartMole = document.querySelector(".restart-mole")
-    // restartMole.addEventListener("click", e =>{
-    //     console.log("entro")
-    //     board()
-    //     counter()
-    // })
-    // setTimeout(() => {
-    //     console.log("hola")
-    //     // document.querySelector(".game").innerHTML= ""
-    //     // document.querySelector("main").innerHTML = template()
-    //     // startGame()
-    // }, 3000);
    }, 300);
    
 }

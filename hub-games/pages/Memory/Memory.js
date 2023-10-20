@@ -65,16 +65,9 @@ deck.forEach((item, index)=>{   //el template
 
 let score = 0
 
-const playGame = () =>{
-    aciertos = 0
-    document.querySelector("#aciertos").textContent = aciertos
-
-
-}
 
 
 let firstCard, firstCardId
-let secondCard, secondCardId
 
 const flip = () =>{
   score = 0
@@ -101,7 +94,10 @@ const flip = () =>{
                     score += 1
                     document.getElementById("aciertos").innerText = score.toString()
                     if (score == 10){
-                      endGame(score)
+                      setTimeout(() => {
+                        endGame(score)
+                      }, 1000);
+                      
                     }
                   } else {
                     setTimeout(() => {
