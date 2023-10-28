@@ -25,14 +25,17 @@ setInterval(()=>{
 }
 } 
 
-let timeUp = false
-let score = 0
-let start = document.createElement("button")
-start.textContent = "START GAME"
-start.id = "start-button"
+let timeUp
+let score
 
 const startGame = () =>{
-    score=0
+    document.querySelector(".mole-container").innerHTML = ""
+    score = 0
+    timeUp = false
+
+    let start = document.createElement("button")
+    start.textContent = "START GAME"
+    start.id = "start-button"
 
     document.querySelector(".mole-container").append(start)
     start.addEventListener("click", e =>{
@@ -62,7 +65,6 @@ const board = () =>{
         square.append(figureDiv)
         document.querySelector(".mole-container").append(square)
     }
-
 
         console.log("topilllooooooo", timeUp)
         const moleTime = randomTime(600, 1000)
@@ -158,14 +160,26 @@ const endGame = () =>{
    <h3 class="h3-diglet"> Le has dado de lleno a <span class="winner-span">${score.toString()}</span> Diglets! </h3>
    <img src="https://res.cloudinary.com/daxddugwt/image/upload/v1697558354/ce16eb9b-6c94-4f54-8007-289a65d13dc5-removebg-preview_cdh7ew.png"
    alt="diglet" class="diglet-after"/>
+   <button class="restart-mole">RESTART GAME </button>
     </div>
    `
+
    setTimeout(() => {
     document.querySelector(".mole-container").innerHTML = ""
     document.querySelector(".mole-container").append(winnerDiv)
+    const reStartButton = document.querySelector(".restart-mole")
+    reStartButton.addEventListener("click", e =>{
+     startGame()
+    })
    }, 300);
-   
+} else if (timeUp && (score == 0)){
 }
+}
+
+const reStartGame = () =>{
+    if (timeUp){
+
+    }
 }
 
 
