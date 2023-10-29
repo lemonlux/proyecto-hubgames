@@ -55,6 +55,7 @@ const startGame = () =>{
 }
 
 const board = () =>{
+    let moleTime = 0
     console.log(timeUp)
     console.log("dentro board")
     for (let i=0; i<9; i++){
@@ -65,9 +66,8 @@ const board = () =>{
         square.append(figureDiv)
         document.querySelector(".mole-container").append(square)
     }
-
-        console.log("topilllooooooo", timeUp)
-        const moleTime = randomTime(600, 1000)
+        moleTime = randomTime(600, 1000)
+        console.log("el topilllooooooo va mu rapido", moleTime)
         const moleInterval = () =>{
             setInterval(()=>{
             createMole()
@@ -128,8 +128,10 @@ const createMole = () => {
     currentMoleSquare = document.getElementById(num);
     currentMoleSquare.append(mole);
     lastSquare = document.getElementById(num);
-} else{
-    endGame()
+    if (timeUp){
+        endGame()
+    }
+
 }
   };
 
